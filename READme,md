@@ -1,0 +1,76 @@
+# Fullstack Project
+* Introduction
+This project is a full-stack web application featuring an Angular-based front end and a Node.js/Express back end, utilizing MongoDB for the database.
+
+* Prerequisites
+- Node.js (v12 or later)
+- npm (Node Package Manager)
+- MongoDB (installed and running)
+
+# Installation
+* Clone the repository:
+    - git clone https://github.com/SamuelOzumba/fullstack.git
+    - cd fullstack
+
+* Set up the back-end:
+    - Navigate to the api directory:
+        cd api
+    - Install dependencies:
+        npm install
+    - Configure environment variables:
+        - Create a .env file in the api directory with the following variables:
+            MONGO_URI=<your-mongodb-uri>
+            PORT=5000
+            JWT_SECRET=<your-jwt-secret>
+
+* Set up the front-end:
+    - Navigate to the client directory:
+        cd ../client
+    - Install dependencies:
+        npm install
+
+# Running the Project
+* Start the back-end server:
+    - Ensure MongoDB is running.
+    - From the api directory, run:
+        npm start
+    - The server should be running on http://localhost:5000.
+
+* Start the front-end client:
+    - From the client directory, run:
+        npm start
+    - The Angular app should be running on http://localhost:4200.
+
+* Access the application:
+    - Open your browser and navigate to http://localhost:4200.
+
+# Project Structure
+* api/: Contains the back-end code with Express and MongoDB.
+    - models/: Mongoose models.
+    - routes/: Express routes.
+    - controllers/: Route handlers.
+    - middleware/: Custom middleware.
+    - config/: Configuration files.
+* client/: Contains the front-end code with Angular.
+    - src/: Source files for the Angular application.
+    - app/: Angular modules and components.
+    - environments/: Environment configuration files.
+    
+# Usage
+* API Endpoints
+    - Authentication:
+        POST /api/auth/register: Register a new user.
+        POST /api/auth/login: Log in an existing user.
+    - User:
+        GET /api/users: Get user data.
+        PUT /api/users/:id: Update user data.
+
+# Front-End Features
+    - User authentication (registration and login)
+    - Protected routes
+    - Dynamic content rendering based on user state
+
+# Environment Configuration
+Ensure MongoDB is running and the .env file in the api directory is correctly set up with your MongoDB URI, JWT secret, and preferred port.
+
+For more information and updates, contact Samuel.ozumba@student.lut.fi.
